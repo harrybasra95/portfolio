@@ -1,4 +1,69 @@
+@import '../../Assets/Styles/colors';
+
 .homepage-container {
-     height: 100vh;
-     width: 100vw;
+     .main-content-container {
+          display: flex;
+          align-items: center;
+          margin-top: 8rem;
+          flex-direction: column;
+          .profile-container {
+               height: 18rem;
+               width: 18rem;
+               border-radius: 20rem;
+               background-color: $profile-back-color;
+               position: relative;
+               img {
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 20rem;
+                    bottom: 0px;
+               }
+          }
+          .heading-title {
+               text-align: center;
+               margin-top: 3rem;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               h1 {
+                    font-size: 7rem;
+                    color: $white;
+                    letter-spacing: -1px;
+                    line-height: 8rem;
+               }
+               .sub-heading {
+                    margin-top: 3rem;
+                    h2 {
+                         font-size: 2rem;
+                         color: $white;
+                         line-height: 3.5rem;
+                    }
+                    .skills-container {
+                         margin-top: 0.5rem;
+                         border-radius: 5px;
+                         display: inline-block;
+                         p {
+                              display: inline-block;
+                              padding: 1rem 1rem;
+                              font-size: 2rem;
+                              margin-right: 0.5rem;
+                              color: $black;
+                              font-weight: bold;
+                              position: relative;
+                              &::before {
+                                   content: '';
+                                   background-color: $white;
+                                   position: absolute;
+                                   z-index: -1;
+                                   transform: skewX(-10deg);
+                                   top: 0px;
+                                   left: 0px;
+                                   height: 100%;
+                                   width: 100%;
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
