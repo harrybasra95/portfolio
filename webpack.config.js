@@ -28,6 +28,10 @@ module.exports = {
                     test: /\.(s(a|c)ss)$/,
                     use: ['style-loader', 'css-loader', 'sass-loader'],
                },
+               {
+                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    loader: 'file-loader',
+               },
           ],
      },
      resolve: {
@@ -35,6 +39,7 @@ module.exports = {
                Components: path.resolve(__dirname, './src/Components'),
                Content: path.resolve(__dirname, './src/Content'),
                Layouts: path.resolve(__dirname, './src/Layouts'),
+               Images: path.resolve(__dirname, './src/Assets/Images'),
           },
           extensions: ['.jsx', '.ts', '.js'],
      },

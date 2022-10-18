@@ -1,10 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homepage from 'Content/Homepage/Homepage';
 
 const Router = () => {
      return (
           <BrowserRouter>
-               <Routes></Routes>
+               <Routes>
+                    <Route path="/" index element={<Homepage />}></Route>
+               </Routes>
           </BrowserRouter>
      );
 };

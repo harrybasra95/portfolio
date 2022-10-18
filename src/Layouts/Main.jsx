@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Main.scss';
 
 const MainLayout = ({ children }) => {
-     return (
-          <>
-               <div>{children}</div>
-          </>
-     );
+     return <div className="main-layout">{children}</div>;
 };
 
 MainLayout.propTypes = {
      children: PropTypes.any,
-     pageHeading: PropTypes.string,
 };
 
 export default MainLayout;

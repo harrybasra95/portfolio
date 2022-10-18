@@ -20,6 +20,7 @@
      },
      "homepage": "https://github.com/harrybasra95/portfolio#readme",
      "dependencies": {
+          "@fontsource/roboto": "^4.5.8",
           "react": "^18.2.0",
           "react-dom": "^18.2.0",
           "react-router-dom": "6"
@@ -34,9 +35,11 @@
           "css-loader": "^6.7.1",
           "eslint": "^8.20.0",
           "eslint-plugin-react": "^7.30.1",
+          "file-loader": "^6.2.0",
           "html-webpack-plugin": "^5.5.0",
           "husky": "^8.0.1",
           "node-sass": "^7.0.1",
+          "postcss-loader": "^7.0.1",
           "sass-loader": "^13.0.2",
           "style-loader": "^3.3.1",
           "webpack": "^5.73.0",

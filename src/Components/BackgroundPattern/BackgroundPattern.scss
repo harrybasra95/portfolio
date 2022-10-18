@@ -1,0 +1,36 @@
+@import '../../Assets/Styles/colors';
+
+.background-pattern-container {
+     height: 100%;
+     width: 100%;
+     background-color: $black;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     overflow: hidden;
+     z-index: -1;
+     .pattern {
+          height: 100vh;
+          width: 100vh;
+          border-radius: 50%;
+          position: absolute;
+          filter: blur(60px);
+          opacity: 0.5;
+     }
+     .pattern-1 {
+          background-color: $pattern-1-color;
+          top: -20%;
+          left: -10%;
+     }
+     .pattern-2 {
+          background-color: $pattern-2-color;
+          right: -30%;
+          top: -30%;
+     }
+
+     .pattern-3 {
+          background-color: $pattern-3-color;
+          right: -20%;
+          top: 15%;
+     }
+}
