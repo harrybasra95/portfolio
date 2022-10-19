@@ -6,9 +6,9 @@ import ProfileImg from 'Images/profile-img.png';
 
 const Homepage = () => {
      return (
-          <MainLayout>
-               <div className="homepage-container">
-                    <BackgroundPattern></BackgroundPattern>
+          <div className="homepage-container">
+               <MainLayout>
+                    <BackgroundPattern />.{' '}
                     <div className="main-content-container">
                          <div className="profile-container">
                               <img src={ProfileImg} alt="" />
@@ -33,8 +33,8 @@ const Homepage = () => {
                               </div>
                          </div>
                     </div>
-               </div>
-          </MainLayout>
+               </MainLayout>
+          </div>
      );
 };
 

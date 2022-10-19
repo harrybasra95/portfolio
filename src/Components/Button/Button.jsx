@@ -1,10 +1,15 @@
 import React from 'react';
 import './Button.scss';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
-const Button = ({ title }) => {
+const Button = ({ title, type }) => {
      return (
-          <div className="button-container">
+          <div
+               className={cn('button-container', {
+                    'button-black': type === 'black',
+               })}
+          >
                <button>{title}</button>
           </div>
      );
@@ -12,6 +17,7 @@ const Button = ({ title }) => {
 
 Button.propTypes = {
      title: PropTypes.string,
+     type: PropTypes.string,
 };
 
 export default Button;

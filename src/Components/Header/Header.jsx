@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 const Header = () => {
      return (
           <header>
-               <div className="header">
+               <div className="header ">
                     <div className="header-left-container">
                          <div className="logo-container">
                               <img src={LogoImg} alt="" />
@@ -18,9 +18,10 @@ const Header = () => {
                          </div>
                     </div>
                     <div className="header-right-container">
-                         <Button title="Contact Me" />
+                         <Button type={'black'} title="Contact Me" />
                     </div>
                </div>
+               <div className="header-space"></div>
           </header>
      );
 };

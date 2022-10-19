@@ -21,6 +21,7 @@
      "homepage": "https://github.com/harrybasra95/portfolio#readme",
      "dependencies": {
           "@fontsource/roboto": "^4.5.8",
+          "classnames": "^2.3.2",
           "react": "^18.2.0",
           "react-dom": "^18.2.0",
           "react-router-dom": "6"
@@ -40,6 +41,7 @@
           "husky": "^8.0.1",
           "node-sass": "^7.0.1",
           "postcss-loader": "^7.0.1",
+          "prop-types": "^15.8.1",
           "sass-loader": "^13.0.2",
           "style-loader": "^3.3.1",
           "webpack": "^5.73.0",

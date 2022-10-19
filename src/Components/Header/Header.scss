@@ -1,8 +1,17 @@
 @import '../../Assets/Styles/colors';
+$header-height: 12rem;
 
+.header-space {
+     height: $header-height;
+}
 .header {
-     padding: 4rem 0rem;
+     height: $header-height;
+     position: fixed;
+     left: 0px;
+     width: 100%;
      display: flex;
+     transition: 0.2s ease;
+     padding: 0 12rem;
      .header-left-container {
           display: flex;
           align-items: center;
@@ -37,6 +46,7 @@
           .logo-container {
                img {
                     height: 5rem;
+                    transition: 0.2s ease;
                }
           }
      }
@@ -45,5 +55,31 @@
           align-items: center;
           justify-content: flex-end;
           display: flex;
+     }
+}
+.header-white {
+     background-color: rgba($white, 1);
+     height: 10rem;
+     .logo-container {
+          img {
+               -webkit-filter: invert(100%);
+               filter: invert(100%);
+          }
+     }
+     .header-left-container {
+          .navlinks-container {
+               .navlink {
+                    color: rgba($black, 1);
+                    &::after {
+                         background-color: $black;
+                    }
+                    &:hover {
+                         color: $black;
+                         &::after {
+                              width: 100%;
+                         }
+                    }
+               }
+          }
      }
 }

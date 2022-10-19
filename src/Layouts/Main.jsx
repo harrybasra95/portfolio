@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Header from 'Components/Header/Header';
 import './Main.scss';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, hideHeader }) => {
      return (
           <div className="main-layout">
-               <Header />
+               {!hideHeader && <Header />}
                {children}
           </div>
      );
@@ -14,6 +14,7 @@ const MainLayout = ({ children }) => {
 
 MainLayout.propTypes = {
      children: PropTypes.any,
+     hideHeader: PropTypes.bool,
 };
 
 export default MainLayout;
