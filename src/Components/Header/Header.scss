@@ -5,6 +5,7 @@ $header-height: 12rem;
      height: $header-height;
 }
 .header {
+     z-index: 5000;
      height: $header-height;
      position: fixed;
      left: 0px;
@@ -59,7 +60,7 @@ $header-height: 12rem;
 }
 .header-white {
      background-color: rgba($white, 1);
-     height: 10rem;
+     height: 8rem;
      .logo-container {
           img {
                -webkit-filter: invert(100%);

@@ -40,6 +40,7 @@ module.exports = {
                Content: path.resolve(__dirname, './src/Content'),
                Layouts: path.resolve(__dirname, './src/Layouts'),
                Images: path.resolve(__dirname, './src/Assets/Images'),
+               Hooks: path.resolve(__dirname, './src/Hooks'),
           },
           extensions: ['.jsx', '.ts', '.js'],
      },
