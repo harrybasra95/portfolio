@@ -1,0 +1,17 @@
+@import '../../Assets/Styles/colors';
+
+.count-container {
+     .count-text {
+          font-size: 4rem;
+          font-weight: 900;
+          color: $black;
+          text-shadow: 1px 0 $black;
+          letter-spacing: 1px;
+          line-height: 5rem;
+     }
+     .title-text {
+          font-size: 2rem;
+          font-weight: 900;
+          text-transform: uppercase;
+     }
+}
