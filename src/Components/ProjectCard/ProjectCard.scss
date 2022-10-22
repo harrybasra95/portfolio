@@ -1,0 +1,22 @@
+@import '../../Assets/Styles/colors';
+
+.project-card-container {
+     display: flex;
+     background: linear-gradient(0deg, rgba(#002b95, 0.7), rgba(#002b95, 0.7)),
+          url('https://jackcreative.staticmania.com/images/project/project-4.png');
+     background-size: cover;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding: 5rem;
+     text-align: center;
+     color: $white;
+     border-radius: 5px;
+     .project-title {
+          font-size: 2.2rem;
+     }
+     .project-role {
+          margin: 2rem 0rem 8rem;
+          font-size: 1.5rem;
+     }
+}

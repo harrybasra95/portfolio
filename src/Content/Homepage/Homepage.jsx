@@ -6,6 +6,7 @@ import ProfileImg from 'Images/profile-img.png';
 import CountComponent from 'Components/CountComponent/CountComponent';
 import GeneralStats from 'Data/Homepage/GeneralStats.json';
 import ProjectTile from 'Components/ProjectTile/ProjectTile';
+import ProjectCard from 'Components/ProjectCard/ProjectCard';
 
 const Homepage = () => {
      const renderCountComponents = () => {
@@ -65,15 +66,21 @@ const Homepage = () => {
                                         imgUrl: 'https://jackcreative.staticmania.com/images/project/project-1.png',
                                    }}
                               />
-                              <ProjectTile
-                                   small
-                                   revers
-                                   tileData={{
-                                        title: 'Datasoft Web & Application Design',
-                                        roles: 'Product Design',
-                                        imgUrl: 'https://jackcreative.staticmania.com/images/project/project-2.png',
-                                   }}
-                              />
+                              <div className="project-combination-tiles">
+                                   <ProjectTile
+                                        small
+                                        revers
+                                        tileData={{
+                                             title: 'Datasoft Web & Application Design',
+                                             roles: 'Product Design',
+                                             imgUrl: 'https://jackcreative.staticmania.com/images/project/project-2.png',
+                                        }}
+                                   />
+                                   <ProjectCard
+                                        title="Movie Time IOS App Development"
+                                        role="Mobile App"
+                                   />
+                              </div>
                          </div>
                     </div>
                </MainLayout>

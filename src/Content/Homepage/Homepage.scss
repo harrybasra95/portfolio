@@ -88,7 +88,17 @@
                     font-size: 6rem;
                }
           }
-          .tiles-container {
+          .project-combination-tiles {
+               display: flex;
+               gap: 20px;
+               > :first-child {
+                    flex: 2;
+                    flex-basis: 66.66%;
+               }
+               > :last-child {
+                    flex: 1;
+                    flex-basis: 33.33%;
+               }
           }
      }
 }

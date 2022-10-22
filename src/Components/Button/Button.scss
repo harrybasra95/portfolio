@@ -10,6 +10,7 @@
           color: $white;
           transition: 0.2s ease;
           cursor: pointer;
+          text-transform: capitalize;
           &:hover {
                background-color: $black;
                border-color: $black;
