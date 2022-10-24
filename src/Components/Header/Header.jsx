@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoImg from 'Images/logo.png';
+import { Logo } from 'Images';
 import './Header.scss';
 import Button from '../Button/Button';
 import useScrollPosition from 'Hooks/useScrollPosition';
@@ -17,7 +17,7 @@ const Header = () => {
                >
                     <div className="header-left-container">
                          <div className="logo-container">
-                              <img src={LogoImg} alt="" />
+                              <img src={Logo} alt="" />
                          </div>
                          <div className="navlinks-container">
                               <div className="navlink">Home</div>

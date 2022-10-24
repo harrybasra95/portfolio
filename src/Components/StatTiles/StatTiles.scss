@@ -1,0 +1,42 @@
+@import '../../Assets/Styles/colors';
+
+.stat-tiles-container {
+     margin: 5rem 0rem;
+     .stat-tiles-title {
+          color: rgba($white, 0.8);
+          font-size: 2.5rem;
+          padding-bottom: 3rem;
+          border-bottom: 1px solid rgba($white, 0.2);
+          text-transform: capitalize;
+     }
+
+     .tiles-container {
+          width: 100%;
+          display: flex;
+          padding: 4rem 0rem;
+          > div {
+               flex: 1 0 33.333333%;
+          }
+          .tile-title {
+               font-size: 2.5rem;
+               font-weight: 900;
+               letter-spacing: 1px;
+               color: $white;
+               text-transform: capitalize;
+          }
+          .tile-subtitle {
+               margin: 3rem 0 1.5rem;
+               color: $white;
+               font-size: 1.8rem;
+               text-transform: capitalize;
+          }
+          .tile-timeline {
+               color: rgba($white, 1);
+               font-size: 1.5rem;
+               text-transform: capitalize;
+          }
+          .subtitle-only {
+               margin: 2rem 0;
+          }
+     }
+}

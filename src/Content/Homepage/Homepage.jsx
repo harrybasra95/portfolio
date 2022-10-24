@@ -2,11 +2,16 @@ import React from 'react';
 import './Homepage.scss';
 import MainLayout from 'Layouts/Main';
 import BackgroundPattern from 'Components/BackgroundPattern/BackgroundPattern';
-import ProfileImg from 'Images/profile-img.png';
+import * as Images from 'Images';
 import CountComponent from 'Components/CountComponent/CountComponent';
 import GeneralStats from 'Data/Homepage/GeneralStats.json';
+import Education from 'Data/Homepage/Education.json';
+import WorkExp from 'Data/Homepage/WorkExp.json';
+import ToolsUsed from 'Data/Homepage/ToolsUsed.json';
+import Skills from 'Data/Homepage/Skills.json';
 import ProjectTile from 'Components/ProjectTile/ProjectTile';
 import ProjectCard from 'Components/ProjectCard/ProjectCard';
+import StatTiles from 'Components/StatTiles/StatTiles';
 
 const Homepage = () => {
      const renderCountComponents = () => {
@@ -19,6 +24,52 @@ const Homepage = () => {
           ));
      };
 
+     const renderEducationComponent = () => {
+          return (
+               <StatTiles
+                    title={Education.title}
+                    tileDataArray={Education.items}
+               />
+          );
+     };
+
+     const renderSkillsComponent = () => {
+          return (
+               <StatTiles title={Skills.title}>
+                    <div className="skills-container">
+                         {Skills.items.map((skill, i) => (
+                              <p
+                                   className="tile-subtitle subtitle-only"
+                                   key={`${skill}-${i}`}
+                              >
+                                   {skill}
+                              </p>
+                         ))}
+                    </div>
+               </StatTiles>
+          );
+     };
+
+     const renderToolsUsedComponent = () => {
+          return (
+               <StatTiles title={ToolsUsed.title}>
+                    <div className="tools-used-container">
+                         {ToolsUsed.items.map((toolName) => (
+                              <div key={toolName} className="tool-icon">
+                                   <img src={Images[toolName]} alt="" />
+                              </div>
+                         ))}
+                    </div>
+               </StatTiles>
+          );
+     };
+
+     const renderWorkExpComponent = () => {
+          return (
+               <StatTiles title={WorkExp.title} tileDataArray={WorkExp.items} />
+          );
+     };
+
      return (
           <div className="homepage-container">
                <div className="landing-page">
@@ -26,7 +77,7 @@ const Homepage = () => {
                          <div className="main-content-container">
                               <BackgroundPattern />
                               <div className="profile-container">
-                                   <img src={ProfileImg} alt="" />
+                                   <img src={Images.Profile} alt="" />
                               </div>
                               <div className="heading-title">
                                    <div className="main-heading">
@@ -84,6 +135,20 @@ const Homepage = () => {
                          </div>
                     </div>
                </MainLayout>
+               <div className="experiences-container">
+                    <BackgroundPattern light />
+                    <div className="experiences-title">
+                         <p>Experiences 💪</p>
+                    </div>
+                    <div className="work-experience-container">
+                         {renderWorkExpComponent()}
+                         {renderEducationComponent()}
+                         <div className="multiple-stat-tiles-container">
+                              {renderSkillsComponent()}
+                              {renderToolsUsedComponent()}
+                         </div>
+                    </div>
+               </div>
           </div>
      );
 };

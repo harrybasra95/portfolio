@@ -81,11 +81,13 @@
      }
 
      .project-tiles-container {
+          margin: 10rem 0rem;
           .projects-tiles-title {
-               padding: 10rem;
+               padding-bottom: 10rem;
                text-align: center;
                p {
                     font-size: 6rem;
+                    font-weight: 900;
                }
           }
           .project-combination-tiles {
@@ -98,6 +100,36 @@
                > :last-child {
                     flex: 1;
                     flex-basis: 33.33%;
+               }
+          }
+     }
+
+     .experiences-container {
+          margin: 10rem 0rem;
+          padding: 15rem 10rem 10rem;
+          position: relative;
+          .experiences-title {
+               font-size: 5rem;
+               font-weight: 900;
+               letter-spacing: 1px;
+               color: $white;
+          }
+          .multiple-stat-tiles-container {
+               display: flex;
+               > div {
+                    flex: 1;
+               }
+          }
+          .tools-used-container {
+               display: flex;
+               .tool-icon {
+                    border: 1px solid rgba($white, 0.2);
+                    margin: 1rem;
+                    border-radius: 1rem;
+                    padding: 2rem;
+                    img {
+                         height: 3rem;
+                    }
                }
           }
      }
