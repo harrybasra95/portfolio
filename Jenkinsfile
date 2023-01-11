@@ -6,7 +6,7 @@ pipeline {
                     script {
                          sh
                          '''
-                         yarn sonar
+                         docker-compose -f ./docker/sonar.docker-compose.yml up -d && docker-compose -f ./docker/sonar.docker-compose.yml down
                          '''
                     }
                }
