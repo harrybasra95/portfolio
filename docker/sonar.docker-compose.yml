@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  sonar-test:
+    build: ../
+    command: [ "node", "scanner.js" ]
+    ports:
+      - "80:80"
