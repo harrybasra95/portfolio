@@ -10,7 +10,7 @@
           "start": "webpack-dev-server  --mode development --hot --port 4000",
           "build": "webpack --mode production",
           "postinstall": "husky install",
-          "sonar": "node scanner.js"
+          "sonar": "yarn add sonarqube-scanner@^3.0.0 && node scanner.js"
      },
      "repository": {
           "type": "git",
