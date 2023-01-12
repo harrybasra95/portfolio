@@ -7,7 +7,5 @@ services:
       context: ../../
       dockerfile: docker/sonar-test/Dockerfile
     command: [ "node", "scanner.js" ]
-    volumes:
-      - ../../:/app/
     ports:
       - "80:80"

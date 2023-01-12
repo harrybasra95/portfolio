@@ -1,12 +1,15 @@
 pipeline {
      agent any
      stages {
-          stage('sonar quality check') {
+          stage('Sonar Quality Check') {
+               agent {
+                    docker { image 'node:19' }
+               }
                steps {
                     script {
                          withSonarQubeEnv(credentialsId: 'sonar-token') {
                               sh '''
-                                  docker-compose -f ./docker/sonar-test/docker-compose.yml up --build  -V
+                                 yarn sonar
                               '''
                          }
                     }

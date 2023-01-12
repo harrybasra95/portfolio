@@ -10,7 +10,7 @@
           "start": "webpack-dev-server  --mode development --hot --port 4000",
           "build": "webpack --mode production",
           "postinstall": "husky install",
-          "sonar": "docker-compose -f ./docker/sonar.docker-compose.yml up -d && docker-compose -f ./docker/sonar.docker-compose.yml down"
+          "sonar": "node scanner.js"
      },
      "repository": {
           "type": "git",
