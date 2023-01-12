@@ -2,7 +2,10 @@ version: "3"
 
 services:
   sonar-test:
-    build: ../
+    image: sonar-test
+    build:
+      context: ../../
+      dockerfile: docker/sonar-test/Dockerfile
     command: [ "node", "scanner.js" ]
     ports:
       - "80:80"

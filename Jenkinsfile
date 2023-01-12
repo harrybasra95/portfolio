@@ -5,7 +5,7 @@ pipeline {
                steps {
                     script {
                          sh '''
-                                  docker-compose -f ./docker/sonar.docker-compose.yml up -d && docker-compose -f ./docker/sonar.docker-compose.yml down
+                                  docker-compose -f ./docker/sonar-test/docker-compose.yml up --build  -V
                               '''
                     }
                }
