@@ -5,6 +5,9 @@ pipeline {
                agent {
                     docker { image 'node:19' }
                }
+               environment {
+                    HOME = '.'
+               }
                steps {
                     script {
                          withSonarQubeEnv(credentialsId: 'sonar-token') {
