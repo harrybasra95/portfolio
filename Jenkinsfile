@@ -10,7 +10,7 @@ pipeline {
                }
                steps {
                     script {
-                         withSonarQubeEnv(credentialsId: 'sonar-token') {
+                         withSonarQubeEnv(credentialsId: 'sonar-new') {
                               sh '''
                                  yarn sonar
                               '''
@@ -21,7 +21,7 @@ pipeline {
           stage('Quality Gate Status') {
                steps {
                     script {
-                         waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                         waitForQualityGate abortPipeline: false, credentialsId: 'sonar-new'
                     }
                }
           }
